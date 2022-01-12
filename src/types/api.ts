@@ -24,11 +24,25 @@ export type HeaderProps = {
   }
 }
 
+export type SectionAboutProjectProps = {
+  title: string
+  description: string
+  image: {
+    data: {
+      attributes: {
+        alternativeText: string
+        url: string
+      }
+    }
+  }
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
       logo: LogoProps
       header: HeaderProps
+      sectionAboutProject: SectionAboutProjectProps
     }
   }
 }

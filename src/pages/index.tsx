@@ -20,12 +20,12 @@ import { LandingPageProps } from 'types/api'
 
 const Index = ({
   data: {
-    attributes: { logo, header }
+    attributes: { logo, header, sectionAboutProject }
   }
 }: LandingPageProps) => (
   <>
     <SectionHero logo={logo} header={header} />
-    <SectionAboutProject />
+    <SectionAboutProject {...sectionAboutProject} />
     <SectionTech />
     <SectionConcepts />
     <SectionModules />
