@@ -1,3 +1,5 @@
+import { SocialLinks } from 'components/ProfileCard'
+
 export type LogoProps = {
   data: {
     attributes: {
@@ -69,17 +71,17 @@ export type Module = {
   description: string
 }
 
-export interface SectionModulesProps {
+export type SectionModulesProps = {
   title: string
   modules: Module[]
 }
 
-export interface SectionAgendaProps {
+export type SectionAgendaProps = {
   title: string
   description: string
 }
 
-export interface PricingBoxProps {
+export type PricingBoxProps = {
   totalPrice: number
   numberInstallments: number
   priceInstallment: number
@@ -87,6 +89,30 @@ export interface PricingBoxProps {
   button: {
     label: string
     url: string
+  }
+}
+
+export type Author = {
+  attributes: {
+    photo: {
+      data: {
+        attributes: {
+          alternativeText: string
+          url: string
+        }
+      }
+    }
+    name: string
+    role: string
+    socialLinks: SocialLinks[]
+    description: string
+  }
+}
+
+export type SectionAboutUsProps = {
+  title: string
+  authors: {
+    data: Author[]
   }
 }
 
@@ -101,6 +127,7 @@ export type LandingPageProps = {
       sectionModules: SectionModulesProps
       sectionAgenda: SectionAgendaProps
       pricingBox: PricingBoxProps
+      sectionAboutUs: SectionAboutUsProps
     }
   }
 }
