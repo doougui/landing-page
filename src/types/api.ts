@@ -79,6 +79,17 @@ export interface SectionAgendaProps {
   description: string
 }
 
+export interface PricingBoxProps {
+  totalPrice: number
+  numberInstallments: number
+  priceInstallment: number
+  benefits: string
+  button: {
+    label: string
+    url: string
+  }
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -89,6 +100,7 @@ export type LandingPageProps = {
       sectionConcepts: SectionConceptsProps
       sectionModules: SectionModulesProps
       sectionAgenda: SectionAgendaProps
+      pricingBox: PricingBoxProps
     }
   }
 }
