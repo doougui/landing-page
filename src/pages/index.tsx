@@ -25,7 +25,8 @@ const Index = ({
       header,
       sectionAboutProject,
       sectionTech,
-      sectionConcepts
+      sectionConcepts,
+      sectionModules
     }
   }
 }: LandingPageProps) => (
@@ -34,7 +35,7 @@ const Index = ({
     <SectionAboutProject {...sectionAboutProject} />
     <SectionTech {...sectionTech} />
     <SectionConcepts {...sectionConcepts} />
-    <SectionModules />
+    <SectionModules {...sectionModules} />
     <SectionAgenda />
     <PricingBox />
     <SectionAboutUs />
