@@ -74,6 +74,11 @@ export interface SectionModulesProps {
   modules: Module[]
 }
 
+export interface SectionAgendaProps {
+  title: string
+  description: string
+}
+
 export type LandingPageProps = {
   data: {
     attributes: {
@@ -83,6 +88,7 @@ export type LandingPageProps = {
       sectionTech: SectionTechProps
       sectionConcepts: SectionConceptsProps
       sectionModules: SectionModulesProps
+      sectionAgenda: SectionAgendaProps
     }
   }
 }
