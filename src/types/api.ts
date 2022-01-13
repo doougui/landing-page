@@ -1,15 +1,3 @@
-export type TechIcon = {
-  icon: {
-    data: {
-      attributes: {
-        alternativeText: string
-        url: string
-      }
-    }
-  }
-  title: string
-}
-
 export type LogoProps = {
   data: {
     attributes: {
@@ -49,9 +37,30 @@ export type SectionAboutProjectProps = {
   }
 }
 
+export type TechIcon = {
+  icon: {
+    data: {
+      attributes: {
+        alternativeText: string
+        url: string
+      }
+    }
+  }
+  title: string
+}
+
+export type Concept = {
+  title: string
+}
+
 export type SectionTechProps = {
   title: string
   techIcons: TechIcon[]
+}
+
+export type SectionConceptsProps = {
+  title: string
+  concepts: Concept[]
 }
 
 export type LandingPageProps = {
@@ -61,6 +70,7 @@ export type LandingPageProps = {
       header: HeaderProps
       sectionAboutProject: SectionAboutProjectProps
       sectionTech: SectionTechProps
+      sectionConcepts: SectionConceptsProps
     }
   }
 }
